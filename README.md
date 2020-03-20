@@ -2,7 +2,7 @@
 
 1) Clone this repository ``git clone https://github.com/Enakoneschniy/homeworks12_19.git``
 
-2) Create new branch ``git checkout -b <firstName_lastName>``
+2) Create new branch ``git checkout -b svetlana_grechkosey``
 
 3) Add some file and commit and push on github
 
