@@ -265,7 +265,8 @@ alert (`Ваш заказ: ${number} ${end}`);
 11. Задача (креативная)
 Написать программу эмулирующую работу кассира в кисете
  */
-/*let numberOfGoods = prompt("Введите количество купленных товаров");
+/*
+let numberOfGoods = prompt("Введите количество купленных товаров");
 numberOfGoods = Number (numberOfGoods);
 let i=1;
 let price; // Цена товара
