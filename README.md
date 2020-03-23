@@ -1,6 +1,6 @@
 # Home works
 
-1) Clone this repository ``git clone https://github.com/Enakoneschniy/homeworks0320.git``
+1) Clone this repository ``git clone https://github.com/Enakoneschniy/homeworks_0320.git``
 
 2) Create new branch ``git checkout -b <firstName_lastName>``
 
