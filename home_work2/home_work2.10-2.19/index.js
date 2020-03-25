@@ -67,9 +67,8 @@
 {
     let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     let arrCopy = [];
-    let lastItem = arr.length - 1;
 
-    for (let i = lastItem; i >= 0; i--) {
+    for (let i = arr.length - 1; i >= 0; i--) {
         arrCopy.push(arr[i]);
     }
 
@@ -123,12 +122,8 @@
  */
 {
     let arr = [1, 2, 3, 4, 5, 6];
-
-    for (let i = 0; i <= arr.length - 1; i += 2) {
-       let item = arr[i];
-       arr[i] = arr[i + 1];
-       arr[i + 1] = item;
-    }
+    [a, b, c, d, e, f] = [1, 2, 3, 4, 5, 6];
+    arr = [b, a, c, d, f, e]
 
     console.log(arr);
 }
@@ -141,14 +136,8 @@
  */
 {
     let arr = [1, 2, 3, 4, 5, 6];
-
-    let first = arr[0];
-    let second = arr[1];
-
-    arr[0] = arr[arr.length - 2];
-    arr[1] = arr[arr.length - 1];
-    arr[arr.length - 2] = first;
-    arr[arr.length - 1] = second;
+    [a, b, c, d, e, f] = arr
+    arr = [e, f, c, d, a, b]
 
     console.log(arr);
 }
