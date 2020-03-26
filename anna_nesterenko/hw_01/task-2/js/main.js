@@ -1,4 +1,12 @@
 'use strict';
+
+// Задача (Попадание точки в область)
+// При помощи prompt запросить у пользователя координату по оси x и координату по оси y.
+//   Далее определить попадает ли точка с этими координатими в заштрисованную область.
+//   Если попадает, то вывести сообщение "Точка попадает в область" если нет то "Точка НЕ попадает в область"
+//
+
+
 let xStr = prompt("Введите,пожалуйста, координату по оси Х!");
 let yStr = prompt("Введите,пожалуйста, координату по оси Y!");
 let x = Number(xStr);
@@ -34,10 +42,10 @@ if (xStr === null || yStr === null){
   const dX = 0 - x;
   const dY = 0 - y;
   
-  const dXvKvadrate = Math.pow(dX, 2);
-  const dYvKvadrate = Math.pow(dY, 2);
+  const dXsquared = Math.pow(dX, 2);
+  const dYsquared = Math.pow(dY, 2);
   
-  const sum = dXvKvadrate + dYvKvadrate;
+  const sum = dXsquared + dYsquared;
   const distance = Math.sqrt(sum);
   
   const fitsTriangle = x >= -y - triangleLength  && x <= 0 && y <= 0;
@@ -51,10 +59,11 @@ if (xStr === null || yStr === null){
   const successText = "Точка попадает в область";
   const failText = "Точка  НЕ попадает в область";
   
-  alert(`Ваша точка (${x}, ${y}) \n`
-    + `Задание 1: ${ resultOfTask1 ? successText : failText } \n`
-    + `Задание 2: ${ resultOfTask2 ? successText : failText } \n`
-    + `Задание 3: ${ resultOfTask3 ? successText : failText } \n`
+  alert(`Ваша точка (${x}, ${y})
+    Задание 1: ${ resultOfTask1 ? successText : failText }
+    Задание 2: ${ resultOfTask2 ? successText : failText }
+    Задание 3: ${ resultOfTask3 ? successText : failText }
+    `
   );
 }
 

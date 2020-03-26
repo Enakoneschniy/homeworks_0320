@@ -1,5 +1,7 @@
 'use strict';
 
+// 12. Кофейный автомат
+
 const SMALL_LATE = 10;
 const AVERAGE_LATE = 20;
 const BIG_LATE = 30;

@@ -1,5 +1,8 @@
 'use strict';
 
+// 11. Задача (креативная)
+// Написать программу эмулирующую работу кассира в кисете
+
 const PRICE_CAMEL = 50;
 const PRICE_MARLBORO = 60;
 const PRICE_PARLIAMENT = 70;

@@ -1,8 +1,12 @@
 'use strict';
+// 8. Задача (Условный оператор)
+// Пользователь вводит год рождения.
+//   Программа показывает количество лет и если лет больше или равно 16,
+//   то пишет – «добро пожаловать», если нет – «вход воспрещен».
 
 let inputYear = prompt("Введите свой год рождения!");
 let numberYear = Number(inputYear);
-let thisYear = 2020;
+let thisYear = new Date().getFullYear()
 let age;
 
 if (inputYear === null){

@@ -1,17 +1,14 @@
 'use strict';
-
+// 3. Задача (Оператор switch)
+//   При помощи prompt запросить у пользователя номер дня недели.
+//     Вывести при помощи alert название дня недели.
+//     если пользователь ввел некорректное значение вывести сообщение "Такого дня недели не существует!"
 
 let inputDayWeeks = prompt("Введите, пожалуйста день недели");
-let numberDauWeeks = Number(inputDayWeeks);
 
 if(inputDayWeeks === null){
   alert(" Ну и ладно!Пока!");
 }
-
-else if (inputDayWeeks.length > 1 || numberDauWeeks >=  8 || numberDauWeeks === 0) {
-  alert("Такого дня недели нет, барашка!");
-}
-
 else {
   switch (inputDayWeeks){
     case "1":
@@ -40,5 +37,10 @@ else {
       
     case "7":
       alert(`${inputDayWeeks}:Воскресенье`);
+      break;
+      
+    default:
+      alert("Такого дня недели нет, барашка!");
   }
+  
 }
