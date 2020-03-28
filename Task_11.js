@@ -1,35 +1,18 @@
 "use strict"
-let flgA = 1
-let a
- 
- 
-
-while(flgA){
-    a = prompt("Здравствуйте. У нас в продаже: кофе, чай, сигареты, пиво, вода")
-      if (a == "кофе"||a =="чай"||a =="сигареты"||a =="пиво"||a =="вода"){
-        flgA = 0
-        } else alert("Напишите буквами,с маленькой буквы") 
-     }
+let arr = []
+let count = 1, elem, num, tmp = ""
 
 
-    if(a == "кофе"|| a == "чай"){
-        a = prompt("С сахаром или без")
-    } if(a == "с сахаром"){
-        alert('Пожалуйста возьмите')
-    } else 
+ num = +prompt("Введите число")
 
-    if(a == "пиво"|| a == "вода"){
-        a = prompt("Из холодильника?")
-    }else if(a == "из холодильника"){
-        alert('Пожалуйста возьмите')
-    } else if(a == "вода"){
-        alert('С газом или без?')
-    }else if (a == "с газом"|| a == "без"){
-        alert('Пожалуйста возьмите')
-    }
-     
-    if ( a == "сигареты"){
-        a = prompt("Winston, Parlament, LM?")  
-    }else if (a == "Winston"||a == "Parlament"||a == "LM"){
-        alert('Пожалуйста возьмите')
-    } else alert('Извините вы не выбрали')
+for(count; count <= num; count++){ 
+    elem = count
+    elem = String(elem)
+    for(let count2 = 1; count2 <= count; count2++){
+         tmp += elem
+        } 
+        arr.push(tmp)
+        tmp = ""
+    
+}
+document.write(arr)

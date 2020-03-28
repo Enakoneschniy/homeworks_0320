@@ -1,29 +1,21 @@
 "use strict"
-let flgA = 1
-let a
- 
- 
+let arr = []
+let count, elem, sum = null
 
-while(flgA){
-    a = prompt("Здравствуйте. Желаете кофе или чай")
-      if (a == "кофе"||a =="чай"){
-        flgA = 0
-        } else alert("Напишите буквами,с маленькой буквы") 
-     }
+for(count = 1; count<=10; count++){
+     elem = Math.round(Math.random()*5)
+     
+    arr.push(elem)
+    elem = ""
+}
 
+count = -1
+  
+while(sum <= 12){
+    sum += arr[count+1]
+    count++
+    }
 
-    if(a == "чай"){
-        a = prompt("С сахаром или без")
-    } 
-    if(a == "с сахаром"){
-        alert('Пожалуйста возьмите')
-    } 
-     if(a == "кофе"){
-        a = prompt("С молоком или без?")
-    } 
-     if(a == "с молоком"){
-        alert('Пожалуйста возьмите')
-    } 
-    if(a == "без"){
-        alert('Пожалуйста возьмите')
-    } 
+document.write(arr)
+document.write("<br>")
+document.write(count)
