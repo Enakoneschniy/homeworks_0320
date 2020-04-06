@@ -1,0 +1,30 @@
+function fmap(gen){
+
+    console.log (a(gen.next().value))
+    console.log (a(gen.next().value))
+   console.log (square)
+}
+
+
+ function a( x ){
+ return x * x
+ }
+
+function* sequence(a) {
+    for(let i = 0; i < Infinity; i++){
+    yield a++
+    }
+  }
+let gen = sequence(0)
+let square = a(gen.next().value)
+ 
+
+console.log (a(gen.next().value))
+console.log (a(gen.next().value))
+
+console.log (fmap())
+console.log (fmap
+
+Почему в функии fmap выдает ошибку а вне нее нет???
+ 
+  
