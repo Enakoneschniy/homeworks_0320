@@ -1,405 +1,416 @@
-/*Задание 1
-Написать функцию которая первым принимает значение, которым заполнять массив,
- а вторым - сколько элементов должно быть в массиве. Пример: arrayFill('x', 5)
- сделает массив ['x', 'x', 'x', 'x', 'x'].
-*/
-
-// function one(element,size){
-
-//     let array = new Array(size);
-
-//     for (let i =0 ; i<array.length;i++){
-//         array[i]=element;
-
-//     }
-//             console.log(array);
-// }
-
-// one('x',10);
-
-
-/*Задание 2
-Дан трехмерный массив с числами, например [[[1, 2], [3, 4]], [[5, 6], [7, 8]]].
-Найдите сумму элементов этого массива. Массив, конечно же, может быть произвольным.
-*/
-
-
-// function two(){
-
-//     let array=[[[1,2],[3,4],[5,6],[7,8,9]]];
-//     let sum=0;
-//     for(let i=0;i<array.length;i++){
-//         for(let j=0;j<array[i].length;j++){
-//             for(let k=0;k<array[i][j].length;k++){
-//                 sum+=array[i][j][k];
-//             }
-//         }
-//     }
-//     console.log(sum);
-// }
-// two();
-
-
-
-/*Задание 3
-Сделайте функцию isNumberInRange, которая параметром принимает число и проверяет, что оно больше нуля и меньше 10.
-Если это так - пусть функция возвращает true, если не так - false.
-*/
-// function three(n){
-//     if(n>0 && n<10){
-//         console.log(true);
-//     }else{
-//         console.log(false);
-//     }
-// }
-// three(34);
-
-
-/*Задание 4
-Сделайте функцию isEven() (even - это четный), которая параметром принимает целое число и проверяет:
-четное оно или нет. Если четное - пусть функция возвращает true, если нечетное - false.
-*/
-
-// function isEven(n){
-//     n = Math.round(n);
-//     return n%2===0? true: false;
-// }
-//  console.log(isEven(5.5));
-
-
-/*Задание 5
-Дан массив с целыми числами. Создайте из него новый массив, где останутся лежать только четные из этих чисел.
-Для этого используйте вспомогательную функцию isEven из предыдущей задачи
-*/
-// let array =[1,2,3,4,5,6,7,8,9];
-// function newArray(array){
-//     for(let i=0;i<array.length;i++){
-//         let current = isEven(array[i]);
-//         if(current===false){
-//             array.splice(i,1);
-//         }
-//     }
-//     console.log(array);
-// }
-// newArray(array);
-
-
-// Задание 6
-
-/* Сделайте функцию getDivisors, которая параметром принимает число и возвращает массив его делителей
-(чисел, на которое делится данное число).
-*/
-
-// function getDivisors(n){
-
-//     let array=[];
-//     for(let i=1;i<=n;i++){
-//         if  (n%i===0){
-//             array.push(i);
-//         }
-//     }
-//     console.log(array);
-// }
-// getDivisors(555);
-
-
-
-// Задание 7
-// Создайте функцию, которая получает два параметра – число и степень числа.
-// Используя ** внутри функции, возведите число в степень и выведите с помощью console.log.
-
-// function degree(n,m){
-//     return n**m;
-// }
-// console.log(degree(2,5));
-
-//8
 /*
-Пользователь вводит год рождения. Программа показывает количество лет и если
-лет больше или равно 16, то пишет – «добро пожаловать», если нет – «вход воспрещен».
-с помощью функций и проверками || и undefined
- */
-// function whatAge(age){
-//     age = age|| prompt('Введите возраст')
-//     let correctAge = age>=16? console.log(`Добро пожаловать`): console.log('Вход воспрещен')
+1. Задача (Рекурсия)
+Дано натуральное число n. Выведите все числа от 1 до n.
+*/
 
+// function recFn(n) {
+// if (n==1){
+//     return n;
 // }
-// whatAge(18);
+// return recFn(n-1)+" "+n;
+// }
+//
+// let countNumber = prompt(`Введите количество чисел`);
+// console.log(recFn(countNumber));
+
+/*2. Задача (Рекурсия)
+Даны два целых числа A и В (каждое в отдельной строке).
+ Выведите все числа от A до B включительно, в порядке возрастания,
+  если A < B, или в порядке убывания в противном случае.
+*/
+
+// function recFn(a,b) {
+//     if(a===b){
+//         return a;
+//     }else{
+//         if(b>a){
+//             console.log(a);
+//             return recFn(a+1,b);
+//          }else {
+//             console.log(a);
+//             return recFn(a-1,b);
+//         }
+//     }
+// }
+// let a= 5;
+// let b = 6;
 // //or
-// whatAge();
+// // a=10;
+// // b=5;
+// console.log(recFn(a,b));
 
-// 9
+/*3. Задача (Рекурсия)
+Дано натуральное число N. Вычислите сумму его цифр.
+При решении этой задачи нельзя использовать строки, списки, массивы (ну и циклы, разумеется).
+*/
 
-// function whatAge(age){
-//     let  correctAge;
-//     if (age===undefined){
-//         age = age|| prompt('Введите возраст');
-//         correctAge = age>=16? console.log(`Добро пожаловать`):console.log('Вход воспрещен')
+// let number = 12345;
+// let sum=0;
+// let current=0;
+// function recFn(x) {
+//     if (x===0){
+//         return ;
 //     }else {
-//         correctAge = age>=16? console.log(`Добро пожаловать`):console.log('Вход воспрещен');
+//         current= x%10;
+//         x=(x-current)/10;
+//         sum+=current;
+//         return recFn(x);
+//     }
+// }
+// recFn(number);
+// console.log(sum);
+
+
+/*4. Задача (Рекурсия)
+Дано натуральное число N. Выведите все его цифры по одной,
+в обратном порядке, разделяя их пробелами или новыми строками.
+При решении этой задачи нельзя использовать строки, списки,
+массивы (ну и циклы, разумеется). Разрешена только рекурсия и целочисленная арифметика.
+*/
+// let number =124125;
+// let current=0;
+// let currentForResult=0;
+// function recFn(n) {
+//   if    (n==0){
+//       return;
+//   }else {
+//       current=n%10;
+//       n=(n-current)/10;
+//       currentForResult=current;
+//       console.log(currentForResult);
+//       return recFn(n);
+//   }
+// }
+// recFn(number);
+
+
+/*5. Задача (Рекурсия)
+Дано натуральное число N. Выведите все его цифры по одной,
+в обычном порядке, разделяя их пробелами или новыми строками.
+При решении этой задачи нельзя использовать строки, списки,
+ массивы (ну и циклы, разумеется). Разрешена только рекурсия и
+ целочисленная арифметика.
+*/
+
+// let x=323456789;
+// let current=0;
+// let currentForResult=0;
+// function recFn(n) {
+//     if (n < 10) {
+//         return n;
+//     } else {
+//         return recFn(n / 10 ^ 0) + `\n` + n % 10;
+//     }
+// }
+// console.log(recFn(x));
+
+
+
+
+/*
+6. Задача (ООП)
+Реализуйте класс Worker (Работник), который будет иметь следующие свойства: name (имя),
+surname (фамилия), rate (ставка за день работы), days (количество отработанных дней).
+Также класс должен иметь метод getSalary(), который будет выводить зарплату работника.
+Зарплата - это произведение (умножение) ставки rate на количество отработанных дней days.
+*/
+// class Worker{
+//     constructor(name,surname,rate,days) {
+//         this.name=name;
+//         this.surname=surname;
+//         this.rate=rate;
+//         this.days=days;
 //     }
 //
-// }
-// whatAge(18);
-// //or
-// // whatAge();
-
-
-// Задание 10
-// Создайте функцию, которая считает длину массива и возвращает ее в виде числа.
-// Массив в функцию передается как аргумент. Если аргумент не задан – выводится сообщение об ошибке. 1
-
-// function arraySearcher(array){
-//     return array ? array.length : alert(`Сообщение об ошибке`);
-// }
-
-// console.log(arraySearcher([1,2,3,4]));
-// //or
-// // console.log(arraySearcher());
-
-
-// Задание 11
-// Пользователь вводит числа. Если число больше 10, то функция возвращает
-// квадрат числа, если меньше 7 – пишет, что число меньше 7.
-// Если 8, 9 – то возвращает соответственно 7 или 8. Реализуйте решение с несколькими return.
-
-// function arrayNumber (n){
-
-//         if(n>10){
-//         return alert(n**2);
-//         }else if(n<7){
-//         return alert(`Число меньше 7`);
-//         }else if(n===8){
-//         return alert(`7`);
-//         }else if(n===9){
-//             return alert(`8`);
-//         }
-// }
-// let n = 1;
-// while(n!==0){
-//     n = parseFloat(prompt(`Введите число\n 0- Для выхода`));
-//     if(n!==0){
-//         arrayNumber(n);
-//     }else{
-//         break;
+//     getSalary(){
+//         return this.days*this.rate;
+//     }
+//
+//     set newRate(rate){
+//         return this.rate=rate;
+//     }
+//     set newDays(days){
+//         return this.days=days;
 //     }
 // }
+// let worker = new Worker('Иван','Иванов',10,31);
+// console.log(worker.name);
+// console.log(worker.surname);
+// console.log(worker.rate);
+// console.log(worker.days);
+// console.log(worker.getSalary());
 
-// Задание 12
-// Дана строка. Сделайте заглавным первый символ каждого слова этой строки.
-// Для этого сделайте вспомогательную функцию ucfirst, которая будет получать строку,
-// делать первый символ этой строки заглавным и возвращать обратно строку с заглавной первой буквой.
 
-// let str = 'den love coding';
-// let strArray = str.split(' ');
+/*7. Задача (ООП)
+Модифицируйте класс Worker из предыдущей задачи следующим образом:
+ сделайте все его свойства приватными, а для их чтения сделайте методы-геттеры.
+ */
+
+
+/*8. Задача (ООП)
+Модифицируйте класс Worker из предыдущей задачи следующим образом:
+для свойства rate и для свойства days сделайте еще и методы-сеттеры.*/
+
+// worker.newRate=5;
+// console.log(worker.rate);
+// worker.newDays=25;
+// console.log(worker.days);
+// console.log(worker.getSalary());
+
+/*
+9. Задача (ООП)
+Реализуйте класс MyString, который будет иметь следующие методы: метод reverse(),
+который параметром принимает строку, а возвращает ее в перевернутом виде, метод ucFirst(),
+который параметром принимает строку, а возвращает эту же строку, сделав ее первую букву
+заглавной и метод ucWords, который принимает строку и делает заглавной
+первую букву каждого слова этой строки.
+*/
+// class MyString {
+// revers(str){
+// let strArray = str.split('');
+// strArray= strArray.reverse();
+//     return strArray.join('');
+// }
+// ucFirst(str){
+//     let strArray=str.split('');
+//
+//    strArray[0]= strArray[0].toUpperCase();
+//
+//     return strArray.join('');
+// }
+//
+// ucWords(str){
+//     let strArray = str.split(' ');
 // let newArr = [];
 // for (let i = 0; i < strArray.length; i++) {
 // newArr.push(ucfirst(strArray[i]));
 // }
-// console.log(newArr.join(' '));
-//
+// return newArr.join(' ');
+// }
+// }
 // function ucfirst(str) {
-// let a = str[0].toUpperCase() + str.substr(1);
-// return(a);
+//     let a = str[0].toUpperCase() + str.substr(1);
+//     return(a);
 // }
-
-//Задание 13
-// Дана строка вида 'var_text_hello'. Сделайте из него текст 'varTextHello'.
-// let str ='var_text_hello';
-// let arrayStr=str.split('_');
-
-// for(let i=0;i<arrayStr.length;i++){
-//     if(arrayStr[0]!=arrayStr[i]){
-//         arrayStr[i]=arrayStr[i].slice(0,1).toUpperCase() +arrayStr[i].slice(1);
-//     }
-// }
-// let result = arrayStr.join('');
-// console.log(result);
-
-/*
-Задание 14
-Сделайте функцию inArray, которая определяет, есть в массиве элемент с заданным текстом или нет.
- Функция первым параметром должна принимать текст элемента,
-а вторым - массив, в котором делается поиск. Функция должна возвращать true или false. Показать решение.
-*/
-// function inArray(text,array){
-// let isExist = false
-//         for(let i=0;i<array.length;i++){
-//             if(array[i]===text){
-//                 isExist= true;
-//             }
-//         }
-//         return isExist;
-// }
-
-// let str =prompt('Введите строку');
-// let arrayStr= str.split(' ');
-// let textElem=prompt('Введите слово которое будем искать');
-// console.log(inArray(textElem,arrayStr));
-
-/*
-Задание 15
-Дана строка, например, '123456'. Сделайте из нее '214365'.
-*/
-// let str ='123456';
-// console.log(str)
-// let strArray= str.split('');
-
-// for(let i=0;i<strArray.length;i+=2){
-//     let current=strArray[i];
-//     strArray[i]=strArray[i+1];
-//     strArray[i+1]=current;
-// }
-
-// let result = strArray.join('');
-
-// console.log(result);
-/*
-Задание 16
-Напиши функцию создания генератора sequence(start, step).
-Она при вызове возвращает другую функцию-генератор, которая при
-каждом вызове дает число на 1 больше, и так до бесконечности.
-Начальное число, с которого начинать отсчет, и шаг, задается при создании генератора.
-Шаг можно не указывать, тогда он будет равен одному.
-Начальное значение по умолчанию равно 0. Генераторов можно создать сколько угодно.*/
-
-// function sequence(start , step ) {
-//     start=start ||0;
-//     step= step||1;
-//     let callNumber = start;
-//     return function() {
-//       let returnValue = callNumber; // значение для вывода
-//       callNumber += step;// готовимся к следующему шагу
-//       return returnValue;
-//     }
-//   }
-// let generator = sequence(10,1);
-// console.log(generator());//10
-// console.log(generator());//11
 //
-// let defaultGenerator=sequence();
-// console.log(defaultGenerator());
-// console.log(defaultGenerator());
+//
+// let str = new MyString();
+//
+// console.log(str.revers('abcde'));
+// console.log(str.ucFirst('abcde'));
+// console.log(str.ucWords('abcde abcde abcde'));
+
+/*10. Задача (ООП)
+Реализуйте класс Student (Студент), который будет наследовать от класса User.
+Этот класс должен иметь следующие свойства: name (имя, наследуется от User),
+surname (фамилия, наследуется от User), year (год поступления в вуз).
+Класс должен иметь метод getFullName() (наследуется от User), с помощью которого
+ можно вывести одновременно имя и фамилию студента. Также класс
+ должен иметь метод getCourse(), который будет выводить текущий курс
+ студента (от 1 до 5). Курс вычисляется так: нужно от текущего года отнять
+ год поступления в вуз. Текущий год получите самостоятельно.
+ */
+// class User {
+//     constructor(name,surname) {
+//     this.name=name;
+//     this.surname=surname;
+//     }
+//     getFullName(){
+//         return `${this.name} ${this.surname}`;
+//     }
+// };
+// class Student extends User {
+//     constructor(name,surname,year) {
+//         super(name,surname);
+//         this.year=year;
+//     }
+//     getCourse(){
+//         let data = new Date();
+//         let currentYear= data.getFullYear();
+//         let course=currentYear-this.year;
+//         if(course>=1 && course<=5){
+//             return `${course} курс, так как текущий год 2020`;
+//         }else {
+//             return `Ты уже закончил вуз`
+//         }
+//     }
+// }
+// let student = new Student('Иван',"Иванов",2019);
+// console.log(student.name);
+// console.log(student.surname);
+// console.log(student.getFullName());
+// console.log(student.year);
+// console.log(student.getCourse());
+
 
 /*
-Задание 17
-Также, нужна функция take(gen, x) которая вызывает функцию gen заданное число (x) раз и возвращает массив с результатами вызовов.
+12. Задача (функции работы с массивами)
+Даны два массива: ['a', 'b', 'c'] и [1, 2, 3]. Объедините их вместе.
 */
-// function take(gen,x) {
-//     let array=[];
-//     for (let i=0;i<x;i++){
-//         array[i]=gen();
+
+// function one(arrayX,arrayY) {
+//     arr3 = arrayX.concat(arrayY);
+// return arr3;
+//
+//     //or
+//     // for (let i=0;i<arrayY.length;i++){
+//     //     arrayX.push(arrayY[i]);
+//     // }
+//     // return arrayX;
+//     //
+// }
+// let arr1=['a', 'b', 'c'];
+// let arr2=[1,2,3];
+// let arr3=[];
+// console.log(one(arr1,arr2));
+
+/*13. Задача (функции работы с массивами)
+Дан массив ['a', 'b', 'c']. Добавьте ему в конец элементы 1, 2, 3.
+*/
+
+// function one(array) {
+//     for (let i=1;i<=3;i++){
+//         array.push(i);
 //     }
 //     return array;
 // }
-//
-// let gen2 = sequence(2,1);
-//
-// console.log(take(gen2,5));
+// let array=['a', 'b', 'c'];
+// console.log(one(array));
+
+/*
+14. Задача (функции работы с массивами)
+Дан массив [1, 2, 3]. Добавьте ему в начало элементы 4, 5, 6*/
+// let arr =[1, 2, 3];
+// function one(array) {
+//     for (let i=6;i>=4;i--){
+//         array.unshift(i);
+//     }
+//     return array;
+// }
+// console.log(one(arr));
 
 
 /*
-Задание 18
-Напиши функцию map(fn, array), которая принимает на вход функцию и массив, и обрабатывает каждый элемент массива этой
- функцией, возвращая новый массив.
+15. Задача (функции работы с массивами)
+Дан массив [1, 2, 3, 4, 5]. С помощью метода slice запишите в новый элементы [1, 2, 3].*/
+// let array=[1, 2, 3, 4, 5];
+// let newArray;
+// function one(array) {
+//         newArray=array.slice(0,3);
+//         return newArray;
+// }
+// console.log(one(array));
+
+/*
+16. Задача (функции работы с массивами)
+Дан массив [1, 2, 3, 4, 5]. С помощью метода slice запишите в новый элементы [4, 5].*/
+// let array=[1, 2, 3, 4, 5];
+// let newArray;
+// function one(array) {
+//         newArray=array.slice(3,5);
+//         return newArray;
+// }
+// console.log(one(array));
+
+/*
+17. Задача (функции работы с массивами)
+Дан массив [1, 2, 3, 4, 5]. С помощью метода splice преобразуйте массив в [1, 4, 5].
 */
 
-// function map(fn,array) {
-//     let arrayResult=[];
-//     if (array.length!==0){
-//         for (let i=0;i<array.length;i++){
-//             arrayResult.push(fn(array[i]));
-//         }
-//         return arrayResult;
-//     }else   {
-//         return arrayResult;
-//     }
-// }
+// let array=[1, 2, 3, 4, 5];
 //
-// function squere(x){
-//     return x*x;
+// function one(array) {
+//         array.splice(1,2);
+//
+//         return array;
 // }
-// console.log(map(squere,[1,2,3,4,5]));
-// console.log(map(squere,[]));
-// let arrayCheck =[6,7,8];
-// console.log(map(squere,arrayCheck));
-// console.log(arrayCheck);
+// console.log(one(array));
 
 /*
+18. Задача (функции работы с массивами)
+Дан массив [1, 2, 3, 4, 5]. С помощью метода splice запишите в новый массив элементы [2, 3, 4].
+*/
+// let array=[1, 2, 3, 4, 5];
+// let newArray=[];
+//
+// function one(array) {
+//     let number = array.splice(1,3);
+//     for (let i=0;i<number.length;i++){
+//         newArray.push(number[i]);
+//     }
+//     return newArray;
+// }
+// console.log(one(array));
 
-Задание 19
-Напиши функцию fmap(a, gen), которая принимает на вход 2 функции, a и gen,
-где gen — функция-генератор вроде той, что была в 17 задании. fmap возвращает новую функцию-генератор,
- которая при каждом вызове берет следующее значение из gen и пропускает его через функцию a.
+/*19. Задача (функции работы с массивами)
+Дан массив [1, 2, 3, 4, 5].
+С помощью метода splice сделайте из него массив [1, 2, 3, 'a', 'b', 'c', 4, 5]
+*/
+// let array=[1, 2, 3, 4, 5];
+// function one(array) {
+//     array.splice(3,0,'a','b','c');
+//     return array;
+// }
+//
+// console.log(one(array));
+
+
+/*
+20. Задача (функции работы с массивами)
+Дан массив [1, 2, 3, 4, 5]. С помощью метода
+splice сделайте из него массив [1, 'a', 'b', 2, 3, 4, 'c', 5, 'e'].
+*/
+
+// let array= [1, 2, 3, 4, 5];
+// function one(array) {
+//
+//     array.splice(1,0,'a','b');
+//     array.splice(6,0,'c');
+//     array.splice(8,0,'e');
+//     return array;
+// }
+// console.log(one(array));
+
+
+/*
+21. Задача (функции работы с массивами)
+Дан объект {js:'test', jq: 'hello', css: 'world'}. Получите массив его ключей.*/
+
+// const obj ={
+//     js:'test',
+//     jq: 'hello',
+//     css: 'world'
+// };
+// function one(obj) {
+// let array=[];
+//     for (let key in obj){
+//         array.push(key);
+//     }
+// return array;
+//     //or
+//     // return Object.keys(obj);
+// }
+// console.log(one(obj));
+
+
+/*22. Задача (ООП)***
+Некая сеть фастфудов предлагает несколько видов гамбургеров:
+маленький (50 тугриков, 20 калорий)
+большой (100 тугриков, 40 калорий)
+Гамбургер может быть с одним из нескольких видов начинок (обязательно):
+сыром (+ 10 тугриков, + 20 калорий)
+салатом (+ 20 тугриков, + 5 калорий)
+картофелем (+ 15 тугриков, + 10 калорий)
+Дополнительно, гамбургер можно посыпать приправой
+(+ 15 тугриков, 0 калорий) и полить майонезом (+ 20 тугриков, + 5 калорий).
+Напиши программу, расчиытвающую стоимость и калорийность гамбургера.
+Используй ООП подход (подсказка: нужен класс Гамбургер, константы, методы для
+выбора опций и рассчета нужных величин).
 */
 
 
-// function sequence(start,step) {
-//     start=start||0;
-//     step=step||1;
-//     let currentStart=start;
-//     return function () {
-//         let resault = currentStart;
-//         currentStart+=step;
-//         return resault;
-//     }
-// }
-// function squere(x) {
-//     return x*x;
-// }
-//
-// function fmap(a,gen) {
-//     return function () {
-//         let argCount = arguments.length;
-//         let newArray=[];
-//         for(let i=0;i<argCount;i++){
-//             newArray[i]= arguments[i];
-//         }
-//         x = a(gen.apply(null,newArray));
-//         return x;
-//     }
-// }
-//
-// let gen = sequence(1,1);
-//
-// let squareGen = fmap(squere,gen);
-// console.log(squareGen());
-// console.log(squareGen());
-// console.log(squareGen());
-// console.log(squareGen());
-// console.log(squareGen());
-//
-// function add(a,b) {
-//     return a+b;
-// }
-//
-// let squereAdd = fmap(squere,add);
-// console.log(squereAdd(2, 3));
-// console.log(squereAdd(5, 7));
 
 
-/*
-Задание 20
-Написать функцию filter, которая принимает функцию-предикат и массив.
-Возвращает она массив значений, для которых предикат вернет true.
-Функция не должна изменятьисходный массив.
- */
-//
-// function isEven(x) {
-//     return x%2===0;
-// }
-//
-// function filter(fn,array) {
-//     let newArray=[];
-//     for (let i=0;i<array.length;i++){
-//         if(!!isEven(array[i])){
-//             newArray.push(array[i]);
-//         }
-//     }
-//  return newArray;
-// }
-//
-// let  inputArray =[1,2,3,4,5,6,7,8];
-//
-// console.log(filter(isEven,inputArray));
-// console.log(inputArray);
+
+
+
