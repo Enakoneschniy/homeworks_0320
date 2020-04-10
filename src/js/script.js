@@ -8,7 +8,7 @@ fetch('http://localhost:8080/users')
 
         let currentUserIndex;
 
-        let modalContent = document.querySelector('.modal-content');
+        let modalContent = document.querySelector('.modal-conteiner');
 
         modalMaker(users);
 
@@ -127,9 +127,9 @@ fetch('http://localhost:8080/users')
                     }
                 })
             })
-            /*span.onclick = function(){
+            span.onclick = function(){
                 modal.style.display = "none";
-            }*/
+            }
 
             window.onclick = function(event) {
                 if (event.target == modal) {
@@ -138,7 +138,6 @@ fetch('http://localhost:8080/users')
             }
         }
     })
-
 
 function onClick(najatayaKnopka) {
     let strelkaElement =  document.querySelectorAll('#strelka');
@@ -187,13 +186,10 @@ function getRenderedUsers(users) {
 }
 
 function getRenderedUsers1(users,number) {
-    return `<div>
-<!--<span class="close">&times;</span>-->
-                <p><strong> Street:</strong> ${users[number].address.street}</p>
+    return `    <p><strong> Street:</strong> ${users[number].address.street}</p>
                 <p><strong> City:</strong> ${users[number].address.city}</p>
-                <p><strong> Zipcode:</strong> ${users[number].address.zipcode}</p>  
-                
-           </div>`
+                <p><strong> Zipcode:</strong> ${users[number].address.zipcode}</p>
+            `
 }
 
 function sorterovshik(users,properti, direction = 'asc'){

@@ -126,7 +126,7 @@ fetch('http://localhost:8080/users').then(function (response) {
   var tableConteiner = document.getElementById('table_item');
   tableConteiner.innerHTML = getRenderedUsers(users);
   var currentUserIndex;
-  var modalContent = document.querySelector('.modal-content');
+  var modalContent = document.querySelector('.modal-conteiner');
   modalMaker(users);
   var direction = 'asc';
   var najatayaKnopka = 0;
@@ -244,9 +244,10 @@ fetch('http://localhost:8080/users').then(function (response) {
         }
       });
     });
-    /*span.onclick = function(){
-        modal.style.display = "none";
-    }*/
+
+    span.onclick = function () {
+      modal.style.display = "none";
+    };
 
     window.onclick = function (event) {
       if (event.target == modal) {
@@ -301,7 +302,7 @@ function getRenderedUsers(users) {
 }
 
 function getRenderedUsers1(users, number) {
-  return "<div>\n<!--<span class=\"close\">&times;</span>-->\n                <p><strong> Street:</strong> ".concat(users[number].address.street, "</p>\n                <p><strong> City:</strong> ").concat(users[number].address.city, "</p>\n                <p><strong> Zipcode:</strong> ").concat(users[number].address.zipcode, "</p>  \n                \n           </div>");
+  return "    <p><strong> Street:</strong> ".concat(users[number].address.street, "</p>\n                <p><strong> City:</strong> ").concat(users[number].address.city, "</p>\n                <p><strong> Zipcode:</strong> ").concat(users[number].address.zipcode, "</p>\n            ");
 }
 
 function sorterovshik(users, properti) {
@@ -314,7 +315,7 @@ function sorterovshik(users, properti) {
     }
   });
 }
-},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"C:/Users/User/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -342,7 +343,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55976" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50394" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -518,5 +519,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/script.js"], null)
+},{}]},{},["C:/Users/User/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/script.js"], null)
 //# sourceMappingURL=/script.d573be0b.js.map
