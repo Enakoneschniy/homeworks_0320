@@ -1,0 +1,146 @@
+/* Support for all browsers of the last 4 versions CSS */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Candara;
+}
+.container{
+    width: 960px;
+    min-height: 700px;
+    margin: 0 auto;
+}
+.table{
+    width: 100%;
+    border-collapse: separate;
+    border: 1px solid blue;
+
+}
+.up {
+    -ms-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+.down {
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+i{
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+}
+button{
+    cursor: pointer;
+    outline: none;
+    padding: 0 10px;
+    background-color: lightblue;
+    border: none;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.add-user-form div{
+    padding: 5px;
+}
+input{
+    padding: 5px;
+}
+.submit{
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid darkorange;
+    padding: 5px 30px;
+    background-color: darkorange;
+    color: #fff;
+    transition: .3s;
+}
+.submit:hover{
+    background-color: orange;
+}
+.add-user{
+    padding: 10px;
+    font-size: 20px;
+    background-color: green;
+    color: white;
+    opacity: .7;
+    border: 1px solid green;
+    border-radius: 5px;
+    margin: 10px 0;
+
+}
+.add-user:hover{
+    transition: .3s;
+    background-color: green;
+    opacity: 1;
+
+}
+button:hover{
+    background-color: cornflowerblue;
+}
+th{
+    width: 25%;
+    text-align: center;
+    padding: 10px 0;
+    border: 1px solid cornflowerblue;
+}
+td{
+    border: 1px solid cornflowerblue;
+    background: aquamarine;
+    padding: 10px 0;
+
+}
+tr{
+    text-align: center;
+}
+.remove-user{
+    background-color: darkred;
+    color: #fff;
+    text-transform: uppercase;
+
+}
+.remove-user:hover{
+    background-color: red;
+    color: chocolate;
+}
+.modal{
+    color: #fff;
+    display: none;
+    position: fixed;
+    background-color: teal;
+    padding: 15px;
+    min-height: 100px;
+    width: 300px;
+    border: 1px solid tan;
+    text-align: center;
+    top: calc(50% - 100px);
+    left: calc(50% - 160px);
+    z-index: 1;
+
+}
+.modal-content{
+
+}
+.click-user{
+    cursor: pointer;
+}
+.close{
+    border-radius: 10%;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 13px;
+}
+.overlay{
+    background: rgba(0, 0, 0, .4);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/*# sourceMappingURL=/style.78032849.css.map */

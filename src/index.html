@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <button class="add-user">Add user</button>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name <button id="sort-by-name"><i class="name-arrow up"></i></button></th>
+            <th>User name <button id="sort-by-username"><i class="username-arrow up"></i></button></th>
+            <th>Email <button id="sort-by-email"><i class="email-arrow up"></i></button></th>
+            <th>Web Site <button id="sort-by-website"><i class="website-arrow up"></i></button></th>
+            <th>Action</th>
+        </tr>
+        </thead>
+
+        <tbody class="tbody">
+        </tbody>
+    </table>
+    <div class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+        </div>
+    </div>
+    <div id="modal-form" class="modal">
+        <div class="modal-content">
+            <form class="add-user-form">
+                <div><input type="text" name="name" placeholder="name" required></div>
+                <div><input type="text" name="username" placeholder="username" required></div>
+                <div><input type="text" name="email" placeholder="email" required></div>
+                <div><input type="text" name="website" placeholder="website" required></div>
+                <div><input type="text" name="company.name" placeholder="company name" required></div>
+                <div><button type="submit" class="submit">Save</button></div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
