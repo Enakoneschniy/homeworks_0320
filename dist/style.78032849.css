@@ -1,0 +1,160 @@
+button{
+border: 1px solid black;
+    background-color: black;
+    color: white;
+    outline: none;
+    height: 15px;
+position: relative;
+}
+button:hover{
+    cursor: pointer;
+    background-color: green;
+}
+
+#strelka{
+    position: relative;
+}
+
+.niz{
+    bottom:3px;
+    width: 10px;
+    height: 10px;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    transform: rotate(45deg);
+}
+.verh{
+    top:4px;
+    width: 10px;
+    height: 10px;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    transform: rotate(-135deg);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+body {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.myBtn {
+    cursor: pointer;
+}
+
+p{
+    font-size: 24px;
+    margin: 16px 0 0 20px;
+}
+*{
+    box-sizing:border-box;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    position: absolute;
+    background-color: black;
+    color: white;
+    /*margin: auto;*/
+    top: calc(50% - 100px);
+    left:calc(50% - 175px);
+    padding: 0;
+    border: 1px solid black;
+    width: 350px;
+    height: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+@keyframes animatetop {
+    from {top:-200px; opacity:0}
+    to {top:calc(50% - 100px); opacity:1}
+}
+
+.close,
+.close-form{
+    cursor: pointer;
+    color: white;
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.add-user-form{
+    position: absolute;
+    left: 28%;
+    top: 2%;
+}
+.save{
+    background-color: aqua;
+    color: black;
+    width: 161px;
+    height: 24px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.save:hover{
+    background-color: #00cbff;
+}
+
+.add-user{
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    margin-top: 10px;
+    left: calc(50% - 100px);
+}
+.remove{
+    width: 100px;
+    height: 25px;
+    font-size: 15px;
+}
+
+@media (max-width: 980px) {
+    body{
+        font-size: 18px;
+    }
+}
+@media (max-width: 720px) {
+    body{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 590px) {
+    body{
+        font-size: 12px;
+    }
+}
+@media (max-width: 590px) {
+    body{
+        font-size: 10px;
+    }
+}
+@media (max-width: 370px) {
+    body{
+        font-size: 8px;
+    }
+    #add,
+    #delete{
+        font-size: 10px;
+        width: 150px;
+        height: 25px;
+    }
+}
+
+/*# sourceMappingURL=/style.78032849.css.map */

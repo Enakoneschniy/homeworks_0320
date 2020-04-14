@@ -1,0 +1,20 @@
+{
+  "name": "workingspace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "json": "json-server --watch db.json --port 8080"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "parcel-bundler": "^1.12.4"
+  }
+}
