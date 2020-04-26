@@ -7,7 +7,6 @@
    С помощью нашего класса создайте двух рабочих и найдите сумму их зарплат.*/
 
 class Worker {
-    test = 50;
 
     constructor(options) {
         this.name = options.name
