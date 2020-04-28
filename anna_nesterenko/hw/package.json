@@ -1,0 +1,26 @@
+{
+  "name": "homeworks_0320",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "npm run dev & npm run json",
+    "dev": "parcel -p 3000 watch ./*/*.html --out-dir dist --no-cache",
+    "json": "json-server --watch db.json --port 8080",
+    "devtxt": "parcel -p 3000 watch ./*/*.txt --out-dir dist --no-cache"
+  },
+  "keywords": [],
+  "author": "Eugene Nakoneschniy",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "sass": "^1.24.3"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.7.4",
+    "lodash": "^4.17.15"
+  }
+}
