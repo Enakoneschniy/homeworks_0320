@@ -1,0 +1,136 @@
+/* tabel */
+.users-table {
+    width: 100%;
+    background: black;
+    color: black;
+    border-spacing: 1px; 
+   }
+.users-table th, td {
+    background: white; 
+    padding: 5px;
+  }
+.user-name{
+    cursor: pointer;
+}
+
+  /* modal window */
+.modal{
+    position: absolute;
+    background: white;
+    padding: 15px;
+    min-width: 300px;
+    min-height: 100px;
+    max-width: 400px;
+    border: 1px solid black;
+    border-radius: 4px;
+    text-align: left;
+    display: none;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+/* botton  */
+
+/* delet */
+.remove-btn{
+    background: rgb(216, 137, 137);
+    font-size: 14px;
+    color: white;
+    padding: 5px;
+    outline: none;
+    cursor: pointer;
+}
+/* add user */
+.add-user{
+    background: greenyellow;
+    padding: 5px;
+    font-size: 14px;    
+    margin-bottom: 10px;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.modal-body-head{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #cacaca;
+    margin-left: 5px;
+}
+.input-wrapper{
+   padding: 5px 10px;
+   display: flex;
+   justify-content: space-between;
+   border-bottom: 1px solid #cacaca;
+}
+.input-wrapper:last-child{
+    border-top: 1px solid #cacaca;
+}
+.table-add-address{
+    width: 100%;
+}
+.table-add-address td{
+    display: flex;
+    justify-content: space-between;
+}
+.table-add-company td{
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-body-footer{
+    padding: 5px;
+    text-align: right;
+}
+.up {
+    -ms-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+.down {
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+i{
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+}
+button{
+    cursor: pointer;
+    outline: none;
+    padding: 0 10px;
+    border: 1px solid rgb(90, 90, 90);
+    border-radius: 3px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+}
+.modal-window-title{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #cacaca;
+}
+
+.close{
+    cursor: pointer;
+}
+.modal-window-body{
+    margin: 5px 0 5px;
+}
+.modal-window_item{
+    margin: 5 px;
+}
