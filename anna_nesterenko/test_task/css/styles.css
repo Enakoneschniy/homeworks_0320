@@ -1,0 +1,97 @@
+/*body{*/
+  /*background: rgb(201,228,228);*/
+/*}*/
+
+.wrapper {
+  padding: 7% 0;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.title{
+  font-size: 45px;
+  text-align: center;
+  font-style: italic;
+  color:#36C2CF;
+  margin: 0 0 40px 0;
+  text-shadow: 2px 1px 0 rgba(255, 149, 52, 1);
+}
+
+.table {
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 1px 1px 20px 14px rgba(220,245,245,1);
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.table tr{
+  color:#36C2CF ;
+}
+
+.table th,
+.table td {
+  padding: 30px;
+  text-align: center;
+}
+
+.table th{
+  background: #36C2CF;
+  color: orange;
+}
+
+.table tr:hover{
+  color: orange;
+}
+
+.table tr:nth-child(2n){
+  background: rgb(240,251,252);
+}
+
+.table tr:hover{
+  color: orange;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.visible {
+  display: flex;
+}
+
+.container {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.overlay{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(201,228,228,0.6);
+  transition: .3s all;
+}
+
+.modal-table{
+  width: 100%;
+  box-shadow: 4px 4px 24px 18px rgba(220,245,245,1);
+}
+
+.modal-table th,
+.modal-table td {
+  padding: 15px;
+}
