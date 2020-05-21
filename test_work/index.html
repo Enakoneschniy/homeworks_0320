@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <button class="add-user">Add new user</button>
+    <table class="users-table">
+        <thead>
+                <tr>
+                <th>Name <button id="sort-by-name"><i class="name-arrow up"></i></button></th>
+                <th>User name <button id="sort-by-username"><i class="username-arrow up"></i></button></th>
+                <th>Email <button id="sort-by-email"><i class="email-arrow up"></i></button></th>
+                <th>Web Site <button id="sort-by-website"><i class="website-arrow up"></i></button></th>
+                <th>Action</th>
+                </tr>
+        </thead>
+        <tbody class="table-body">
+        </tbody>
+    </table>
+    <div class="modal" id = 'info-modal'>
+        <div class="modal-body">
+        </div>
+    </div>
+    <div class="modal" id = 'add-modal'>
+        <div class="modal-body">
+            <form class="add-user-form" name="myForm">
+                <div class="modal-body-head">
+                    <span>Account creation</span>
+                    <strong class = 'close'>&times;</strong>
+                </div>
+                <div class="input-wrapper">
+                    <label >Name:</label>
+                    <input id = 'name' type="text" name="name" placeholder="Name" >
+                </div> 
+               <div class="input-wrapper" >
+                    <label >Username:</label>
+                    <input id = 'username' type="text" name="username" placeholder="Username" >
+                </div>  
+                <div class="input-wrapper">
+                    <label >Email:</label>
+                    <input id = 'email' type="text" name="email" placeholder="Email" >
+                </div> 
+                <div class="input-wrapper">
+                    <label >Address:</label>
+                    <table class="table-add-address">
+                        <tr>
+                            <td><label >Street:</label><input id = 'street' type="text" name="address.street" placeholder="Street" ></td>
+                        </tr>
+                        <tr>
+                            <td><label >Suite:</label><input id = 'suite' type="text" name="address.suite" placeholder="Suite" ></td>
+                        </tr>
+                        <tr>
+                            <td><label >City:</label><input id = 'city' type="text" name="address.city" placeholder="City" ></td>
+                        </tr>
+                        <tr>
+                            <td><label >Zipcode:</label><input id = 'zipcode' type="text" name="address.zipcode" placeholder="Zipcode" ></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="input-wrapper" >
+                    <label >Phone:</label>
+                    <input id = 'phone' type="text" name="phone" placeholder="Phone" >
+                </div> 
+                <div class="input-wrapper" >
+                    <label >Website:</label>
+                    <input id = 'website' type="text" name="website" placeholder="Website" >
+                </div>
+                <div class="input-wrapper" >
+                    <label >Company:</label>
+                    <table class="table-add-company">
+                        <tr>
+                            <td><label >Name:</label><input id = 'companyName' type="text" name="company.name" placeholder="Company Name" ></td>
+                        </tr>
+                        <tr>
+                            <td><label >Catch Phrase:</label><input id = 'catchPhrase' type="text" name="company.catchPhrase" placeholder="Catch Phrase" ></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-body-footer">
+                    <button type="submit" class="save">Save</button> 
+                </div> 
+            </form>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
